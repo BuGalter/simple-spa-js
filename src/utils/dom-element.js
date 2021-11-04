@@ -16,4 +16,18 @@ class DomElement {
     this.domElementAttributes = elementDescription.domElementAttributes;
     this.domElementText = elementDescription.domElementText;
   };
+  /**
+   * Checks that the tag name is correct.
+   * @returns {string} The tag name.
+   */
+  get tag() {
+    if (this.domElementTag === undefined ||
+        this.domElementTag === '' ||
+        typeof this.domElementTag !== 'string') {
+          return this.domElementTag = 'div';
+    };
+    return this.domElementTag;
+  };
 }
+
+export { DomElement };
