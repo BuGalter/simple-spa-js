@@ -1,0 +1,71 @@
+html {
+  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+  font-size: 20px;
+}
+
+body {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex-block {
+  display: flex;
+}
+
+.main-heading {
+  text-align: center;
+  color: blue;
+}
+
+.wrapper-content {
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-description {
+  flex: 1;
+  justify-content: center;
+  align-content: center;
+}
+
+.main-content {
+  flex: 2;
+  justify-content: center;
+  align-content: center;
+}
+
+@media screen and (min-width: 0px) and (max-width: 320px) {
+  .wrapper-content {
+      background-color: brown;
+      display: block;
+      max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 680px) {
+  .wrapper-content {
+      background-color:darkblue;
+      max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 681px) and (max-width: 1200px) {
+  .wrapper-content {
+      background-color:darkorange;
+      max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+  .wrapper-content {
+      background-color:deeppink;
+  }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  .wrapper-content {
+      background-color: chartreuse;
+  }
+}
