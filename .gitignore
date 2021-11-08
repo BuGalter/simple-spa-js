@@ -5,3 +5,5 @@ todo.md
 dist/
 
 temp-code.js
+
+.vscode/
