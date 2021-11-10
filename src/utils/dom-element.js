@@ -1,13 +1,14 @@
 /**
  * dom-element module.
- * @module utils/dom-element
+ * @module simple-spa-js/dom-element
+ * @see module: simple-spa-js/app-descpription
  */
 
-/** Class representing DOM element.*/
+/** Class representing DOM node.*/
 class DomElement {
   /**
-   * Create a DOM Element.
-   * @param {object} elementDescription - Description of the DOM element being created. 
+   * Create a DOM node.
+   * @param {DomElement} elementDescription - Description of the DOM node being created. 
    */
   constructor(elementDescription) {
     this.domElementTag = elementDescription.domElementTag;
@@ -28,6 +29,11 @@ class DomElement {
     };
     return this.domElementTag;
   };
-}
+  /**
+     * Convert a object containing descriptions of dom element into a DOM node.
+     * @param {DomElement} elementDescription - object containing description of the DOM node.
+     * @return {DOM element} DOM element.
+     */
+};
 
 export { DomElement };
