@@ -1,6 +1,7 @@
 /**
  * __short-info module.
  * @module simple-spa-js/app-descpription/__short-info.
+ * @see module: simple-spa-js/dom-element.
  */
 
 export const shortInfo = {
