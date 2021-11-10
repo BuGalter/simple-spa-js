@@ -16,6 +16,10 @@ import { shortInfo } from "./__short-info";
  */
 
  const appDescription = {
+  /**
+   * Description of the container that will contain information about the application.
+   * @type {DOM element}
+   */
   domElementTag: 'div',
   domElementClasses: ['app-description'],
   domElementStyle: {

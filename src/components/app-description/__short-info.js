@@ -4,6 +4,10 @@
  */
 
 export const shortInfo = {
+  /**
+   * Item description short information about the application.
+   * @type {DOM element}
+   */
   domElementTag: 'h3',
   domElementClasses: ['app-description__short-info'],
   domElementStyle: {
