@@ -1,3 +1,5 @@
+import { shortInfo } from "./__short-info";
+
 /**
  * app-descpription module.
  * @module simple-spa-js/app-descpription.
@@ -26,4 +28,9 @@
     id: 'test',
   },
   domElementText: 'Hello, world!' 
+};
+
+export function makeAppDescription() {
+  console.log(appDescription);
+  console.log(shortInfo);
 };
