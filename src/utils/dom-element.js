@@ -40,10 +40,10 @@ class DomElement {
   get style() {
     let stringStyle = '';
     if (this.domElementStyle === undefined || 
-        typeof this.domElementStyle !== Object) {
+        typeof this.domElementStyle !== 'object') {
           return stringStyle;
     };
-    for (prop in this.domElementStyle) {
+    for (let prop in this.domElementStyle) {
       stringStyle += prop + ':' + this.domElementStyle[prop];
     };
     return stringStyle;
