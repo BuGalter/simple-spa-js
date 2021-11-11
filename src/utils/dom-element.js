@@ -33,9 +33,20 @@ class DomElement {
     if (this.domElementTag === undefined ||
         this.domElementTag === '' ||
         typeof this.domElementTag !== 'string') {
-          return this.domElementTag = 'div';
+          this.domElementTag = 'div';
     };
     return this.domElementTag;
+  };
+  get style() {
+    let stringStyle = '';
+    if (this.domElementStyle === undefined || 
+        typeof this.domElementStyle !== Object) {
+          return stringStyle;
+    };
+    for (prop in this.domElementStyle) {
+      stringStyle += prop + ':' + this.domElementStyle[prop];
+    };
+    return stringStyle;
   };
   /**
      * Convert a object containing descriptions of dom element into a DOM node.
