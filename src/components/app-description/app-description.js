@@ -1,3 +1,4 @@
+import { DomElement } from "../../utils/dom-element";
 import { shortInfo } from "./__short-info";
 
 /**
@@ -27,6 +28,14 @@ import { shortInfo } from "./__short-info";
 };
 
 export function makeAppDescription() {
-  console.log(appDescription);
-  console.log(shortInfo);
+  const domElement = new DomElement(appDescription);
+  console.log(domElement.tag);
+  console.log(domElement.style);
+  const tag = domElement.tag;
+  const style = domElement.style;
+  const element = document.createElement(tag);
+  element.setAttribute('style', style);
+  element.className = appDescription.domElementClasses[0];
+  element.textContent = appDescription.domElementText;
+  console.log(element);
 };
