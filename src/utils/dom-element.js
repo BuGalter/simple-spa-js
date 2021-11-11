@@ -37,6 +37,11 @@ class DomElement {
     };
     return this.domElementTag;
   };
+  /**
+   * Checks that style element is correct and turns the object into a string,
+   * if the styles are not passed or are not correct, returns an empty string.
+   * @returns {string} The styles for DOM element.
+   */
   get style() {
     let stringStyle = '';
     if (this.domElementStyle === undefined || 
