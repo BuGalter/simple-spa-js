@@ -17,8 +17,6 @@ import { shortInfo } from "./__short-info";
   domElementClasses: ['app-description'],
   domElementStyle: {
     'flex': '1;',
-    'justify-content': 'center;',
-    'align-content': 'center;',
     'background-color': 'springgreen;'
   },
   domElementAttributes: {
@@ -29,13 +27,20 @@ import { shortInfo } from "./__short-info";
 
 export function makeAppDescription() {
   const domElement = new DomElement(appDescription);
-  console.log(domElement.tag);
-  console.log(domElement.style);
   const tag = domElement.tag;
   const style = domElement.style;
+  const text = domElement.text;
+  const attributes = domElement.attributes;
+  const classes = domElement.classes;
   const element = document.createElement(tag);
+  for (let i = 0; i < classes.length; i += 1 ) {
+    element.classList.add(classes[i]);
+  };
   element.setAttribute('style', style);
-  element.className = appDescription.domElementClasses[0];
-  element.textContent = appDescription.domElementText;
-  console.log(element);
+  for (let prop in attributes) {
+    element.setAttribute(prop, attributes[prop]);
+  };
+  element.textContent = text;
+  let wrapper = document.querySelector('.wrapper-content');
+  wrapper.append(element);
 };
