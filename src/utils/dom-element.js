@@ -67,6 +67,18 @@ class DomElement {
     return classes;
   };
   /**
+   * Checks the existence of attributes and their type object.
+   * If the attributes are not passed or are not correct, returnsempty object.
+   * @returns {object}
+   */
+  get attributes() {
+    let attributes = this.domElementAttributes;
+    if (attributes === undefined || typeof attributes !== 'object') {
+      return attributes = {};
+    };
+    return attributes;
+  };
+  /**
      * Convert a object containing descriptions of dom element into a DOM node.
      * @param {DomElement} elementDescription - object containing description of the DOM node.
      * @return {DOM element} DOM element.
