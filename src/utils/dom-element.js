@@ -27,6 +27,7 @@ class DomElement {
   };
   /**
    * Checks that the tag name is correct.
+   * If the tag name are not passed or are not correct, returns string 'div'.
    * @returns {string} The tag name.
    */
   get tag() {
@@ -39,7 +40,7 @@ class DomElement {
   };
   /**
    * Checks that style element is correct and turns the object into a string,
-   * if the styles are not passed or are not correct, returns an empty string.
+   * If the styles are not passed or are not correct, returns an empty string.
    * @returns {string} The styles for DOM element.
    */
   get style() {
@@ -68,8 +69,8 @@ class DomElement {
   };
   /**
    * Checks the existence of attributes and their type object.
-   * If the attributes are not passed or are not correct, returnsempty object.
-   * @returns {object}
+   * If the attributes are not passed or are not correct, returns empty object.
+   * @returns {object} The attributes for DOM element.
    */
   get attributes() {
     let attributes = this.domElementAttributes;
@@ -77,6 +78,18 @@ class DomElement {
       return attributes = {};
     };
     return attributes;
+  };
+  /**
+   * Checks for the text content of an element
+   * If the text content are not passed or are not correct, returns empty string.
+   * @returns {string} The text content for DOM element.
+   */
+  get text() {
+    let textContent = this.domElementText;
+    if (textContent === undefined || typeof textContent !== 'string') {
+      return textContent = '';
+    };
+    return textContent;
   };
   /**
      * Convert a object containing descriptions of dom element into a DOM node.
