@@ -54,6 +54,19 @@ class DomElement {
     return stringStyle;
   };
   /**
+   * Checks that the classes are specified for an element and
+   * that they are specified using an array.
+   * If the classes are not passed or are not correct, returns array with one empty string.
+   * @returns {array} The classes for DOM element.
+   */
+  get classes() {
+    let classes = this.domElementClasses;
+    if (classes === undefined || !Array.isArray(classes)) {
+      return classes = [''];
+    };
+    return classes;
+  };
+  /**
      * Convert a object containing descriptions of dom element into a DOM node.
      * @param {DomElement} elementDescription - object containing description of the DOM node.
      * @return {DOM element} DOM element.
