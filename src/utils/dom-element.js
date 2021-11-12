@@ -18,7 +18,7 @@ class DomElement {
    * Create a DOM node.
    * @param {DomElement} elementDescription - Description of the DOM node being created. 
    */
-  constructor(elementDescription) {
+  constructor(elementDescription = {}) {
     this.domElementTag = elementDescription.domElementTag;
     this.domElementClasses = elementDescription.domElementClasses;
     this.domElementStyle = elementDescription.domElementStyle;
@@ -33,7 +33,7 @@ class DomElement {
     if (this.domElementTag === undefined ||
         this.domElementTag === '' ||
         typeof this.domElementTag !== 'string') {
-          this.domElementTag = 'div';
+          return 'div';
     };
     return this.domElementTag;
   };
