@@ -22,11 +22,14 @@ import { shortInfo } from "./__short-info";
 };
 
 function makeAppDescription() {
-  const appDescript = Creator.createDomElement(appDescription);
-  const infoShort = Creator.createDomElement(shortInfo);
+  const appDescript = Creator.collectDomElement(appDescription);
+  const infoShort = Creator.collectDomElement(shortInfo);
   appDescript.append(infoShort);
+
   /* Creator.initDomElement(appDescription);
-  let appDescribe = Creator.setTagDomElement();
+  console.log(Creator.element);
+  Creator.createDomElement();
+  console.log(Creator.domElement);
   Creator.setClassesDomElement();
   Creator.setStylesDomElement();
   Creator.setTextContentDomElement(); */
