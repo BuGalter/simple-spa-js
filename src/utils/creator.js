@@ -11,11 +11,13 @@ const Creator = {
   domElement: '',
   initDomElement: (elementDescription) => {
     Creator.element = new DomElement(elementDescription);
+    return Creator.element;
   },
 
   setTagDomElement: () => {
     const tag = Creator.element.tag;
     Creator.domElement = document.createElement(tag);
+    return Creator.domElement;
   },
 
   setClassesDomElement: () => {
@@ -23,6 +25,7 @@ const Creator = {
     for (let i = 0; i < classes.length; i += 1 ) {
       Creator.domElement.classList.add(classes[i]);
     };
+    return Creator.domElement;
   },
 
   setAttributesDomElement: () => {
@@ -30,6 +33,7 @@ const Creator = {
     for (let prop in attributes) {
       Creator.domElement.setAttribute(prop, attributes[prop]);
     };
+    return Creator.domElement;
   },
 
   setStylesDomElement: () => {
@@ -37,18 +41,18 @@ const Creator = {
     if (style !== '') {
       Creator.domElement.setAttribute('style', style);
     };
+    return Creator.domElement;
   },
 
   setTextContentDomElement: () => {
     const text = Creator.element.text;
     Creator.domElement.textContent = text;
+    return Creator.domElement;
   },
 
   createDomElement: (elementDescription) => {
     Creator.initDomElement(elementDescription);
-    console.log(Creator.element);
     Creator.setTagDomElement();
-    console.log(Creator.domElement);
     Creator.setClassesDomElement();
     Creator.setAttributesDomElement();
     Creator.setStylesDomElement();
