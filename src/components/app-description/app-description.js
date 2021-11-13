@@ -18,21 +18,19 @@ import { shortInfo } from "./__short-info";
   domElementStyle: {
     'flex': '1;',
     'background-color': 'springgreen;'
-  },
-  domElementAttributes: {
-    id: 'test',
-  },
-  domElementText: 'Hello, world!' 
+  }
 };
 
 function makeAppDescription() {
-  const appDescribe = Creator.createDomElement(appDescription);
+  const appDescript = Creator.createDomElement(appDescription);
+  const infoShort = Creator.createDomElement(shortInfo);
+  appDescript.append(infoShort);
   /* Creator.initDomElement(appDescription);
   let appDescribe = Creator.setTagDomElement();
   Creator.setClassesDomElement();
   Creator.setStylesDomElement();
   Creator.setTextContentDomElement(); */
-  return appDescribe;
+  return appDescript;
 };
 
 export { makeAppDescription };
