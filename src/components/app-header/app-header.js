@@ -1,4 +1,5 @@
 import { Creator } from "../../utils/creator";
+import { headingElement } from "./__heading";
 
 /**
  * app-header module.
@@ -7,7 +8,7 @@ import { Creator } from "../../utils/creator";
  */
 
 
- const appHeader = {
+ const appHeaderConteiner = {
   /**
    * Description of the container that will contain main header for app.
    * @type {DOM element}
@@ -21,10 +22,10 @@ import { Creator } from "../../utils/creator";
 };
 
 function makeAppHeader() {
-  const appHeading = Creator.collectDomElement(appHeader);
-  const heading = Creator.collectDomElement();
-  appHeading.append();
-  return appHeading;
+  const appHeader = Creator.collectDomElement(appHeaderConteiner);
+  const heading = Creator.collectDomElement(headingElement);
+  appHeader.append(heading);
+  return appHeader;
 };
 
 export { makeAppHeader };
