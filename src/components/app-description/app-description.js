@@ -2,6 +2,7 @@ import { Creator } from "../../utils/creator";
 import { shortInfoElement } from "./__short-info";
 import { authorElement } from "./__author";
 import { clientSideElement } from "./__client-side";
+import { serverSideElement } from "./__server-side";
 
 /**
  * app-descpription module.
@@ -31,6 +32,8 @@ function makeAppDescription() {
   appDescription.append(author);
   const clientSide = Creator.collectDomElement(clientSideElement);
   appDescription.append(clientSide);
+  const serverSide = Creator.collectDomElement(serverSideElement);
+  appDescription.append(serverSide);
   return appDescription;
 };
 
