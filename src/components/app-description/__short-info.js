@@ -4,7 +4,7 @@
  * @see module: simple-spa-js/dom-element.
  */
 
-export const shortInfo = {
+export const shortInfoElement = {
   /**
    * Item description short information about the application.
    * @type {DOM element}
@@ -13,9 +13,6 @@ export const shortInfo = {
   domElementClasses: ['app-description__short-info'],
   domElementStyle: {
     'color': 'red;',
-  },
-  domElementAttributes: {
-    test: 'test h3',
   },
   domElementText: 'A simple single page application written in HTML, CSS, JS for working\
   with the database mySQL' 
