@@ -13,6 +13,7 @@ export const shortInfoElement = {
   domElementClasses: ['app-description__short-info'],
   domElementStyle: {
     'color': 'red;',
+    'text-align': 'center;',
   },
   domElementText: 'A simple single page application written in HTML, CSS, JS for working\
   with the database mySQL' 

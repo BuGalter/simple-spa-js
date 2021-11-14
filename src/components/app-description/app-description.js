@@ -1,5 +1,6 @@
 import { Creator } from "../../utils/creator";
-import { shortInfo } from "./__short-info";
+import { shortInfoElement } from "./__short-info";
+import { authorElement } from "./__author";
 
 /**
  * app-descpription module.
@@ -8,7 +9,7 @@ import { shortInfo } from "./__short-info";
  */
 
 
- const appDescription = {
+ const appDescriptionConteiner = {
   /**
    * Description of the container that will contain information about the application.
    * @type {DOM element}
@@ -22,18 +23,12 @@ import { shortInfo } from "./__short-info";
 };
 
 function makeAppDescription() {
-  const appDescript = Creator.collectDomElement(appDescription);
-  const infoShort = Creator.collectDomElement(shortInfo);
-  appDescript.append(infoShort);
-
-  /* Creator.initDomElement(appDescription);
-  console.log(Creator.element);
-  Creator.createDomElement();
-  console.log(Creator.domElement);
-  Creator.setClassesDomElement();
-  Creator.setStylesDomElement();
-  Creator.setTextContentDomElement(); */
-  return appDescript;
+  const appDescription = Creator.collectDomElement(appDescriptionConteiner);
+  const shortInfo = Creator.collectDomElement(shortInfoElement);
+  appDescription.append(shortInfo);
+  const author = Creator.collectDomElement(authorElement);
+  appDescription.append(author);
+  return appDescription;
 };
 
 export { makeAppDescription };

@@ -11,5 +11,8 @@
    */
   domElementTag: 'h6',
   domElementClasses: ['app-description__author'],
+  domElementStyle: {
+    'text-align': 'right;',
+  },
   domElementText: 'by Valeriy' 
 };
