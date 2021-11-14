@@ -3,6 +3,7 @@ import { shortInfoElement } from "./__short-info";
 import { authorElement } from "./__author";
 import { clientSideElement } from "./__client-side";
 import { serverSideElement } from "./__server-side";
+import { workPrinciplesElement } from "./__work-principles";
 
 /**
  * app-descpription module.
@@ -34,6 +35,8 @@ function makeAppDescription() {
   appDescription.append(clientSide);
   const serverSide = Creator.collectDomElement(serverSideElement);
   appDescription.append(serverSide);
+  const workPrinciples = Creator.collectDomElement(workPrinciplesElement);
+  appDescription.append(workPrinciples);
   return appDescription;
 };
 

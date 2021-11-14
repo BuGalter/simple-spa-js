@@ -4,7 +4,7 @@
  * @see module: simple-spa-js/dom-element.
  */
 
- export const serverSideElement = {
+ export const workPrinciplesElement = {
   /**
    * Item description short information about the work-principles of application.
    * @type {DOM element}
@@ -16,6 +16,6 @@
     'text-align': 'center;',
   },
   domElementText: 'Приложение, получает данные из базы данных без перезагрузки страницы.\
-  Обновляется только информация в таблицер. Данные можно сортировать, так же был\
+  Обновляется только информация в таблице. Данные можно сортировать, так же был\
   реализован пагинатор, который обновляется вместе с таблицей.' 
 };
