@@ -9,20 +9,15 @@ body {
   margin-right: auto;
 }
 
-.flex-block {
-  display: flex;
-}
-
 .wrapper-content {
   max-width: 85%;
   margin-left: auto;
   margin-right: auto;
 }
 
- .blocks {
-  justify-content: center;
-  align-content: center;
- }
+.flex-block {
+  display: flex;
+}
 
 @media screen and (min-width: 0px) and (max-width: 320px) {
   .wrapper-content {

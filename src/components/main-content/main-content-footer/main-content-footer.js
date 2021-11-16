@@ -1,7 +1,7 @@
 import { Creator } from "../../../utils/creator";
 import { copyrightElement } from "./__copyright";
 import { nickElement } from "./__nick";
-import { mailElement } from "./__mai";
+import { mailElement } from "./__mail";
 
 /**
  * main-content-footer module.
@@ -19,6 +19,7 @@ import { mailElement } from "./__mai";
   domElementClasses: ['main-content-footer', 'flex-block'],
   domElementStyle: {
     'background-color': 'black;',
+    'justify-content': 'space-around;'
   }
 };
 
