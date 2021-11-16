@@ -1,6 +1,7 @@
 import { Creator } from "../../../utils/creator";
 import { copyrightElement } from "./__copyright";
 import { nickElement } from "./__nick";
+import { mailElement } from "./__mai";
 
 /**
  * main-content-footer module.
@@ -25,8 +26,10 @@ function makeMainContentFooter() {
   const mainContentFooter = Creator.collectDomElement(mainContentFooterConteiner);
   const copyright = Creator.collectDomElement(copyrightElement);
   const nick = Creator.collectDomElement(nickElement);
+  const mail = Creator.collectDomElement(mailElement);
   mainContentFooter.append(copyright);
   mainContentFooter.append(nick);
+  mainContentFooter.append(mail);
   return mainContentFooter;
 };
 
