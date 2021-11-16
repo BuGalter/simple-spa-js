@@ -24,7 +24,7 @@ function makeMainContentHeader() {
   const mainContentHeader = Creator.collectDomElement(mainContentHeaderConteiner);
   const heading = Creator.collectDomElement(headingElement);
   mainContentHeader.append(heading);
-  return appHeader;
+  return mainContentHeader;
 };
 
 export { makeMainContentHeader };
