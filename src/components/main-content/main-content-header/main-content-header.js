@@ -1,3 +1,4 @@
+import { Creator } from "../../../utils/creator";
 import { headingElement } from "./__heading";
 
 /**
@@ -16,7 +17,7 @@ import { headingElement } from "./__heading";
   domElementClasses: ['main-content-header'],
   domElementStyle: {
     'text-align': 'center;',
-    'color': 'blue;'
+    'color': 'gold;'
   }
 };
 
