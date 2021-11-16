@@ -12,4 +12,8 @@
    */
   domElementTag: 'div',
   domElementClasses: ['main-content-header'],
+  domElementStyle: {
+    'text-align': 'center;',
+    'color': 'blue;'
+  }
 };
