@@ -11,5 +11,8 @@
    */
   domElementTag: 'span',
   domElementClasses: ['main-content-footer__copyright'],
-  domElementText: '&copy 2021' 
+  domElementStyle: {
+    'color': 'white;',
+  },
+  domElementText: '&copy 2021'
 };
