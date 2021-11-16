@@ -1,5 +1,6 @@
 import { Creator } from "../../../utils/creator";
 import { sortBtnElement } from "./__sort-btn";
+import { inputElement } from "./__input";
 
 /**
  * main-content-form module.
@@ -23,6 +24,8 @@ import { sortBtnElement } from "./__sort-btn";
 function makeMainContentForm() {
   const sortForm = Creator.collectDomElement(mainContentFormConteiner);
   const sortBtn = Creator.collectDomElement(sortBtnElement);
+  const input = Creator.collectDomElement(inputElement);
+  sortForm.append(input);
   sortForm.append(sortBtn);
   return sortForm;
 };
