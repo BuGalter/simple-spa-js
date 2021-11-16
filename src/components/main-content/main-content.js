@@ -1,6 +1,7 @@
 import { Creator } from "../../utils/creator";
 import { makeMainContentHeader } from "./main-content-header/main-content-header";
 import { makeMainContentFooter } from "./main-content-footer/main-content-footer";
+import { makeMainContentForm } from "./main-content-form/main-content-form";
 
 /**
  * main-content module.
@@ -26,7 +27,9 @@ function makeMainContent() {
   const mainContent = Creator.collectDomElement(mainContentConteiner);
   const mainContentHeader = makeMainContentHeader();
   const mainContentFooter = makeMainContentFooter();
+  const sortForm = makeMainContentForm();
   mainContent.append(mainContentHeader);
+  mainContent.append(sortForm);
   mainContent.append(mainContentFooter);
   return mainContent;
 };
