@@ -14,5 +14,5 @@
   domElementStyle: {
     'color': 'white;',
   },
-  domElementText: '&copy 2021'
+  domElementText: '© 2021'
 };
