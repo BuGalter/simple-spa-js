@@ -1,3 +1,5 @@
+import { headingElement } from "./__heading";
+
 /**
  * main-content-header module.
  * @module simple-spa-js/main-content/main-content-header.
@@ -17,3 +19,12 @@
     'color': 'blue;'
   }
 };
+
+function makeMainContentHeader() {
+  const mainContentHeader = Creator.collectDomElement(mainContentHeaderConteiner);
+  const heading = Creator.collectDomElement(headingElement);
+  mainContentHeader.append(heading);
+  return appHeader;
+};
+
+export { makeMainContentHeader };
