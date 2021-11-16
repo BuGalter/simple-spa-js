@@ -19,11 +19,6 @@ body {
   margin-right: auto;
 }
 
-.main-content {
-  flex: 2;
-  background-color: slateblue;
-}
-
  .blocks {
   justify-content: center;
   align-content: center;
