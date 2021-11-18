@@ -17,7 +17,7 @@ import { inputElement } from "./__input";
   domElementTag: 'form',
   domElementClasses: ['main-content-sort-form', 'flex-block'],
   domElementAttributes: {
-    name: 'sort-form'
+    name: 'sortForm'
   },
   domElementStyle: {
     'justify-content': 'space-around;'
