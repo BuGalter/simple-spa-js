@@ -1,5 +1,8 @@
 import { Creator } from "../../../../utils/creator";
 import { captionTableElement } from "./__caption";
+import { tableRowElement } from "./table-row";
+import { tableHeadersElement } from "./table-headers";
+import { tableHeadersData } from "./table-headers-data";
 
 /**
  * table-data module.
@@ -25,7 +28,14 @@ import { captionTableElement } from "./__caption";
 function makeTableData() {
   const tableData = Creator.collectDomElement(tableDataConteiner);
   const captionTable = Creator.collectDomElement(captionTableElement);
+  const tableRow = Creator.collectDomElement(tableRowElement);
   tableData.append(captionTable);
+  tableData.append(tableRow);
+  for (let i = 0; i < tableHeadersData.length; i += 1) {
+    let tableHeader = Creator.collectDomElement(tableHeadersElement);
+    tableHeader.textContent = tableHeadersData[i];
+    tableRow.append(tableHeader);
+  };
   return tableData;
 };
 
