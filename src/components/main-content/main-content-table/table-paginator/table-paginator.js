@@ -1,4 +1,5 @@
 import { Creator } from "../../../../utils/creator";
+import { pageNumberBtnElement } from "./__page-number-btn";
 
 /**
  * table-paginator module.
@@ -15,12 +16,22 @@ import { Creator } from "../../../../utils/creator";
   domElementTag: 'div',
   domElementClasses: ['table-paginator', 'flex-block'],
   domElementAttributes: {
-    numberOfRecords: '0'
+    numberofrecords: '50'
+  },
+  domElementStyle: {
+    'justify-content': 'center;'
   }
 };
 
 function makeTablePaginator() {
   const tablePaginator = Creator.collectDomElement(tablePaginatorConteiner);
+  const numPages = tablePaginator.getAttribute('numberofrecords');
+  const numberOfPages = (+numPages) / 10;
+  for (let i = 0; i < numberOfPages; i += 1) {
+    const paginatorBtn = Creator.collectDomElement(pageNumberBtnElement);
+    paginatorBtn.textContent = (i + 1);
+    tablePaginator.append(paginatorBtn);
+  };
   return tablePaginator;
 };
 
