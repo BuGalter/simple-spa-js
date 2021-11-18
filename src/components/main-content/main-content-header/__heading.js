@@ -9,7 +9,7 @@
    * Item description heading main content table.
    * @type {DOM element}
    */
-  domElementTag: 'h3',
+  domElementTag: 'h2',
   domElementClasses: ['main-content-header__heading'],
-  domElementText: 'Таблица с данными о ???' 
+  domElementText: 'Данные о поступлении товаров.' 
 };
