@@ -13,5 +13,6 @@
   domElementClasses: ['table-cell'],
   domElementStyle: {
     'border': '1px solid grey;',
+    'text-align': 'center;'
   }
 };

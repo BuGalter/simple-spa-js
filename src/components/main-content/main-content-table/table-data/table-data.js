@@ -3,6 +3,7 @@ import { captionTableElement } from "./__caption";
 import { tableRowElement } from "./table-row";
 import { tableHeadersElement } from "./table-headers";
 import { tableHeadersData } from "./table-headers-data";
+import { tableCellElement } from "./table-cell";
 
 /**
  * table-data module.
@@ -37,6 +38,15 @@ function makeTableData() {
     let tableHeader = Creator.collectDomElement(tableHeadersElement);
     tableHeader.textContent = tableHeadersData[i];
     tableRow.append(tableHeader);
+  };
+  for (let i = 0; i < 10; i += 1) {
+    let tableRowData = Creator.collectDomElement(tableRowElement);
+    for (let j = 0; j < 4; j += 1) { 
+      let tableCell = Creator.collectDomElement(tableCellElement);
+      tableCell.textContent = i;
+      tableRowData.append(tableCell);
+    };
+    tableData.append(tableRowData);
   };
   return tableData;
 };
