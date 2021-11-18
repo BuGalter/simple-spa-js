@@ -1,4 +1,5 @@
 import { Creator } from "../../../utils/creator";
+import { makeTablePaginator } from "./table-paginator/table-paginator";
 
 /**
  * main-content-table module.
@@ -21,6 +22,8 @@ import { Creator } from "../../../utils/creator";
 
 function makeMainContentTable() {
   const mainContentTable = Creator.collectDomElement(mainContentTableConteiner);
+  const tablePaginator = makeTablePaginator();
+  mainContentTable.append(tablePaginator);
   return mainContentTable;
 };
 

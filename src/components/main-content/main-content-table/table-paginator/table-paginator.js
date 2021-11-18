@@ -1,4 +1,4 @@
-import { Creator } from "../../../utils/creator";
+import { Creator } from "../../../../utils/creator";
 
 /**
  * table-paginator module.
