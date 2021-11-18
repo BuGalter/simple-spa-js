@@ -11,4 +11,7 @@
    */
   domElementTag: 'th',
   domElementClasses: ['table-headers'],
+  domElementStyle: {
+    'border': '1px solid grey;',
+  }
 };

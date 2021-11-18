@@ -21,7 +21,9 @@ import { tableHeadersData } from "./table-headers-data";
   domElementStyle: {
     'border': '1px solid grey;',
     'border-collapse': 'collapse;',
-    'width': '90%;'
+    'width': '90%;',
+    'margin-left': 'auto;',
+    'margin-right': 'auto;' 
   }
 };
 
