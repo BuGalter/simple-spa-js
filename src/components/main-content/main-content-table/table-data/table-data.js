@@ -1,4 +1,5 @@
 import { Creator } from "../../../../utils/creator";
+import { captionTableElement } from "./__caption";
 
 /**
  * table-data module.
@@ -23,6 +24,8 @@ import { Creator } from "../../../../utils/creator";
 
 function makeTableData() {
   const tableData = Creator.collectDomElement(tableDataConteiner);
+  const captionTable = Creator.collectDomElement(captionTableElement);
+  tableData.append(captionTable);
   return tableData;
 };
 

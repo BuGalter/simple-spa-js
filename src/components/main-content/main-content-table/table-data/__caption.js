@@ -12,7 +12,7 @@
   domElementTag: 'caption',
   domElementClasses: ['data-table__caption'],
   domElementStyle: {
-    'color': 'gold;',
+    'color': 'black;',
   },
-  domElementText: 'Перечень товаров.' 
+  domElementText: 'Перечень товаров' 
 };
