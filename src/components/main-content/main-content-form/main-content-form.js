@@ -2,6 +2,7 @@ import { Creator } from "../../../utils/creator";
 import { sortBtnElement } from "./__sort-btn";
 import { inputElement } from "./__input";
 import { makeFormSelectColumn } from "./form-select-column/form-select-column";
+import { makeFormSelectCondition } from "./form-select-contition/form-select-condition";
 
 /**
  * main-content-form module.
@@ -28,6 +29,8 @@ import { makeFormSelectColumn } from "./form-select-column/form-select-column";
 function makeMainContentForm() {
   const formElements = [inputElement, sortBtnElement];
   const sortForm = Creator.collectElementsToContainer(mainContentFormConteiner, formElements);
+  const selectContition = makeFormSelectCondition();
+  sortForm.prepend(selectContition);
   const selectColumn = makeFormSelectColumn();
   sortForm.prepend(selectColumn)
   return sortForm;
