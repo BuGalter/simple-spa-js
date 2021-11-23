@@ -19,18 +19,13 @@ import { mailElement } from "./__mail";
   domElementClasses: ['main-content-footer', 'flex-block'],
   domElementStyle: {
     'background-color': 'black;',
-    'justify-content': 'space-around;'
+    'justify-content': 'space-around;',
   }
 };
 
 function makeMainContentFooter() {
-  const mainContentFooter = Creator.collectDomElement(mainContentFooterConteiner);
-  const copyright = Creator.collectDomElement(copyrightElement);
-  const nick = Creator.collectDomElement(nickElement);
-  const mail = Creator.collectDomElement(mailElement);
-  mainContentFooter.append(copyright);
-  mainContentFooter.append(nick);
-  mainContentFooter.append(mail);
+  const footerElements = [copyrightElement, nickElement, mailElement];
+  const mainContentFooter = Creator.collectElementsToContainer(mainContentFooterConteiner, footerElements);
   return mainContentFooter;
 };
 
