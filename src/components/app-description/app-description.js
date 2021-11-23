@@ -26,7 +26,10 @@ import { workPrinciplesElement } from "./__work-principles";
 };
 
 function makeAppDescription() {
-  const appDescription = Creator.collectDomElement(appDescriptionConteiner);
+  const appDescriptionElements = [shortInfoElement, authorElement, clientSideElement,
+  serverSideElement, workPrinciplesElement];
+  const appDescription = Creator.collectElementsToContainer(appDescriptionConteiner, appDescriptionElements);
+  /*const appDescription = Creator.collectDomElement(appDescriptionConteiner);
   const shortInfo = Creator.collectDomElement(shortInfoElement);
   appDescription.append(shortInfo);
   const author = Creator.collectDomElement(authorElement);
@@ -36,7 +39,7 @@ function makeAppDescription() {
   const serverSide = Creator.collectDomElement(serverSideElement);
   appDescription.append(serverSide);
   const workPrinciples = Creator.collectDomElement(workPrinciplesElement);
-  appDescription.append(workPrinciples);
+  appDescription.append(workPrinciples); */
   return appDescription;
 };
 
