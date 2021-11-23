@@ -1,5 +1,7 @@
 import { Creator } from "../../../../utils/creator";
 import { optionNameElement } from "./__option-name";
+import { optionNumberElement } from "./__option-number";
+import { optionPriceElement } from "./__option-price";
 
 /**
  * form-select-column module.
@@ -31,7 +33,7 @@ function collectConteinerElements(container, arrayElements) {
 };
 
 function makeFormSelectColumn() {
-  const selectFormElements = [optionNameElement];
+  const selectFormElements = [optionNameElement, optionNumberElement, optionPriceElement];
   const formSelectColumn = collectConteinerElements(formSelectColumnConteiner, selectFormElements);
   return formSelectColumn;
 };
