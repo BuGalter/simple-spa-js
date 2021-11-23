@@ -1,4 +1,8 @@
 import { Creator } from "../../../../utils/creator";
+import { optionEqualElement } from "./__option-equal";
+import { optionContainsElement } from "./__option-contains";
+import { optionMoreElement } from "./__option-more";
+import { optionSmallerElement } from "./__option-smaller";
 
 /**
  * form-select-condition module.
@@ -21,7 +25,7 @@ import { Creator } from "../../../../utils/creator";
 
 
 function makeFormSelectCondition() {
-  const selectFormElements = [];
+  const selectFormElements = [optionEqualElement, optionContainsElement, optionMoreElement, optionSmallerElement];
   const formSelectCondition = Creator.collectElementsToContainer(formSelectConditionConteiner, selectFormElements);
   return formSelectCondition;
 };

@@ -1,19 +1,19 @@
 /**
- * __option-more module.
- * @module simple-spa-js/main-content/main-content-form/form-select-column/__option-more.
+ * __option-smaller module.
+ * @module simple-spa-js/main-content/main-content-form/form-select-column/__option-smaller.
  * @see module: simple-spa-js/dom-element.
  */
 
- export const optionMoreElement = {
+ export const optionSmallerElement = {
   /**
-   * Item description option more in select condition.
+   * Item description option smaller in select condition.
    * @type {DOM element}
    */
   domElementTag: 'option',
-  domElementClasses: ['select-contition__option-more'],
+  domElementClasses: ['select-contition__option-smaller'],
   domElementAttributes: {
-    value: 'more',
+    value: 'smaller',
     selected: true
   },
-  domElementText: 'Больше'
+  domElementText: 'Меньше'
 };
