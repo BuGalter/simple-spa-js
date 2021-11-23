@@ -26,13 +26,10 @@ import { makeFormSelectColumn } from "./form-select-column/form-select-column";
 };
 
 function makeMainContentForm() {
-  const sortForm = Creator.collectDomElement(mainContentFormConteiner);
-  const sortBtn = Creator.collectDomElement(sortBtnElement);
-  const input = Creator.collectDomElement(inputElement);
+  const formElements = [inputElement, sortBtnElement];
+  const sortForm = Creator.collectElementsToContainer(mainContentFormConteiner, formElements);
   const selectColumn = makeFormSelectColumn();
-  sortForm.append(selectColumn);
-  sortForm.append(input);
-  sortForm.append(sortBtn);
+  sortForm.prepend(selectColumn)
   return sortForm;
 };
 
