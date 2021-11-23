@@ -29,17 +29,6 @@ function makeAppDescription() {
   const appDescriptionElements = [shortInfoElement, authorElement, clientSideElement,
   serverSideElement, workPrinciplesElement];
   const appDescription = Creator.collectElementsToContainer(appDescriptionConteiner, appDescriptionElements);
-  /*const appDescription = Creator.collectDomElement(appDescriptionConteiner);
-  const shortInfo = Creator.collectDomElement(shortInfoElement);
-  appDescription.append(shortInfo);
-  const author = Creator.collectDomElement(authorElement);
-  appDescription.append(author);
-  const clientSide = Creator.collectDomElement(clientSideElement);
-  appDescription.append(clientSide);
-  const serverSide = Creator.collectDomElement(serverSideElement);
-  appDescription.append(serverSide);
-  const workPrinciples = Creator.collectDomElement(workPrinciplesElement);
-  appDescription.append(workPrinciples); */
   return appDescription;
 };
 
