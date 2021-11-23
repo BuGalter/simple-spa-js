@@ -50,6 +50,16 @@ const Creator = {
     Creator.setStylesDomElement();
     Creator.setTextContentDomElement();
     return Creator.domElement;
+  },
+
+  collectElementsToContainer: (container, arrayElements) => {
+    const len = arrayElements.length;
+    const domConteiner = Creator.collectDomElement(container); 
+    for (let i = 0; i < len; i +=1) {
+      let domElement = Creator.collectDomElement(arrayElements[i]);
+      domConteiner.append(domElement);
+    };
+    return domConteiner;
   }
 };
 
