@@ -13,7 +13,6 @@
   domElementClasses: ['select-contition__option-smaller'],
   domElementAttributes: {
     value: 'smaller',
-    selected: true
   },
   domElementText: 'Меньше'
 };

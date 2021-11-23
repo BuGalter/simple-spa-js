@@ -13,7 +13,6 @@
   domElementClasses: ['select-contition__option-more'],
   domElementAttributes: {
     value: 'more',
-    selected: true
   },
   domElementText: 'Больше'
 };

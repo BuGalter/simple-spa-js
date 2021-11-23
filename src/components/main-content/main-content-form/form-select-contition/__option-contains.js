@@ -13,7 +13,6 @@
   domElementClasses: ['select-contition__option-contains'],
   domElementAttributes: {
     value: 'contains',
-    selected: true
   },
   domElementText: 'Содержит'
 };
