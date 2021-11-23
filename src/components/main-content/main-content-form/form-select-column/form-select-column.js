@@ -1,4 +1,5 @@
-import { Creator } from "../../../utils/creator";
+import { Creator } from "../../../../utils/creator";
+import { optionNameElement } from "./__option-name";
 
 /**
  * form-select-column module.
@@ -19,7 +20,18 @@ import { Creator } from "../../../utils/creator";
   }
 };
 
+function collectConteinerElements(container, arrayElements) {
+  const lenght = arrayElements.lenght;
+  const domConteiner = Creator.collectDomElement(formSelectColumnConteiner); 
+  for (let i = 0; i < lenght; i +=1) {
+    let domElement = Creator.collectDomElement(arrayElements[i]);
+    domConteiner.append(domElement);
+  };
+};
+
 function makeFormSelectColumn() {
+  const selectFormElements = [optionNameElement];
+  collectConteinerElements(formSelectColumnConteiner, selectFormElements);
   return formSelectColumn;
 };
 
