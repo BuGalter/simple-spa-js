@@ -1,6 +1,7 @@
 import { Creator } from "../../../utils/creator";
 import { sortBtnElement } from "./__sort-btn";
 import { inputElement } from "./__input";
+import { makeFormSelectColumn } from "./form-select-column/form-select-column";
 
 /**
  * main-content-form module.
@@ -28,6 +29,8 @@ function makeMainContentForm() {
   const sortForm = Creator.collectDomElement(mainContentFormConteiner);
   const sortBtn = Creator.collectDomElement(sortBtnElement);
   const input = Creator.collectDomElement(inputElement);
+  const selectColumn = makeFormSelectColumn();
+  sortForm.append(selectColumn);
   sortForm.append(input);
   sortForm.append(sortBtn);
   return sortForm;
