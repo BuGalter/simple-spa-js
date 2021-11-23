@@ -1,6 +1,6 @@
 import { Creator } from "../../../utils/creator";
 import { sortBtnElement } from "./__sort-btn";
-import { inputElement } from "./__input";
+import { inputElement } from "./__input-sort-parameter";
 import { makeFormSelectColumn } from "./form-select-column/form-select-column";
 import { makeFormSelectCondition } from "./form-select-contition/form-select-condition";
 

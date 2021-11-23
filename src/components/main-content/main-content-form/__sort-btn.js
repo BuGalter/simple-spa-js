@@ -10,7 +10,7 @@
    * @type {DOM element}
    */
   domElementTag: 'button',
-  domElementClasses: ['main-content-sort-form__sort-btn'],
+  domElementClasses: ['sort-form__sort-btn'],
   domElementStyle: {
     'border-radius': '5px;',
     'background': 'green;',
