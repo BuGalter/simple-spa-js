@@ -12,3 +12,9 @@ const wrapper = document.querySelector('.wrapper-content')
 wrapper.append(appDescription);
 const mainContent = makeMainContent();
 wrapper.append(mainContent);
+
+let url = 'http://127.0.0.1:7000/api';
+let response = await fetch(url, {
+  mode: 'no-cors'
+});
+console.log(response);
