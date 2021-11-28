@@ -15,6 +15,11 @@ wrapper.append(mainContent);
 
 let url = 'http://127.0.0.1:7000/api';
 let response = await fetch(url, {
-  mode: 'no-cors'
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'API-Key': 'secret'
+  }
 });
-console.log(response);
+let data = await response.json();
+console.log(data);
