@@ -9,8 +9,19 @@ import { mailElement } from "./__mail";
  * @see module: simple-spa-js/dom-element.
  */
 
+const mainContentFooterWrapper = {
+  /**
+   * Wrapper for the container that will contain footer app.
+   * @type {DOM element}
+   */
+  domElementTag: 'div',
+  domElementClasses: ['wrapper-footer'],
+  domElementStyle: {
+    'display': 'block;',
+  }
+};
 
- const mainContentFooterConteiner = {
+const mainContentFooterConteiner = {
   /**
    * Description of the container that will contain footer app.
    * @type {DOM element}
@@ -26,7 +37,9 @@ import { mailElement } from "./__mail";
 function makeMainContentFooter() {
   const footerElements = [copyrightElement, nickElement, mailElement];
   const mainContentFooter = Creator.collectElementsToContainer(mainContentFooterConteiner, footerElements);
-  return mainContentFooter;
+  const wrapper = Creator.collectDomElement(mainContentFooterWrapper);
+  wrapper.append(mainContentFooterWrapper);
+  return wrapper;
 };
 
 export { makeMainContentFooter };
