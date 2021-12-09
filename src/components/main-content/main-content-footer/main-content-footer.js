@@ -38,7 +38,7 @@ function makeMainContentFooter() {
   const footerElements = [copyrightElement, nickElement, mailElement];
   const mainContentFooter = Creator.collectElementsToContainer(mainContentFooterConteiner, footerElements);
   const wrapper = Creator.collectDomElement(mainContentFooterWrapper);
-  wrapper.append(mainContentFooterWrapper);
+  wrapper.append(mainContentFooter);
   return wrapper;
 };
 
