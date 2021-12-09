@@ -9,18 +9,6 @@ import { mailElement } from "./__mail";
  * @see module: simple-spa-js/dom-element.
  */
 
-const mainContentFooterWrapper = {
-  /**
-   * Wrapper for the container that will contain footer app.
-   * @type {DOM element}
-   */
-  domElementTag: 'div',
-  domElementClasses: ['wrapper-footer'],
-  domElementStyle: {
-    'display': 'block;',
-  }
-};
-
 const mainContentFooterConteiner = {
   /**
    * Description of the container that will contain footer app.
@@ -29,6 +17,7 @@ const mainContentFooterConteiner = {
   domElementTag: 'div',
   domElementClasses: ['main-content-footer', 'flex-block'],
   domElementStyle: {
+    'width': '100%;',
     'background-color': 'black;',
     'justify-content': 'space-around;',
   }
@@ -37,9 +26,7 @@ const mainContentFooterConteiner = {
 function makeMainContentFooter() {
   const footerElements = [copyrightElement, nickElement, mailElement];
   const mainContentFooter = Creator.collectElementsToContainer(mainContentFooterConteiner, footerElements);
-  const wrapper = Creator.collectDomElement(mainContentFooterWrapper);
-  wrapper.append(mainContentFooter);
-  return wrapper;
+  return mainContentFooter;
 };
 
 export { makeMainContentFooter };

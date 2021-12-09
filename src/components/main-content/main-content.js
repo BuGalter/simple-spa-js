@@ -27,13 +27,11 @@ import { makeMainContentTable } from "./main-content-table/main-content-table";
 function makeMainContent() {
   const mainContent = Creator.collectDomElement(mainContentConteiner);
   const mainContentHeader = makeMainContentHeader();
-  //const mainContentFooter = makeMainContentFooter();
   const sortForm = makeMainContentForm();
   const mainTable = makeMainContentTable();
   mainContent.append(mainContentHeader);
   mainContent.append(mainTable);
   mainContent.append(sortForm);
-  //mainContent.append(mainContentFooter);
   return mainContent;
 };
 
