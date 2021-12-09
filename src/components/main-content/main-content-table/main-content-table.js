@@ -24,9 +24,9 @@ import { makeTableData } from "./table-data/table-data";
 function makeMainContentTable() {
   const mainContentTable = Creator.collectDomElement(mainContentTableConteiner);
   const tableData = makeTableData();
-  const tablePaginator = makeTablePaginator();
+  //const tablePaginator = makeTablePaginator();
   mainContentTable.append(tableData);
-  mainContentTable.append(tablePaginator);
+  //mainContentTable.append(tablePaginator);
   return mainContentTable;
 };
 
