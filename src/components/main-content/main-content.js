@@ -1,6 +1,5 @@
 import { Creator } from "../../utils/creator";
 import { makeMainContentHeader } from "./main-content-header/main-content-header";
-import { makeMainContentFooter } from "./main-content-footer/main-content-footer";
 import { makeMainContentForm } from "./main-content-form/main-content-form";
 import { makeMainContentTable } from "./main-content-table/main-content-table";
 

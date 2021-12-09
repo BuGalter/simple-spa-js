@@ -10,7 +10,7 @@
    * @type {DOM element}
    */
   domElementTag: 'span',
-  domElementClasses: ['main-content-footer__copyright'],
+  domElementClasses: ['app-footer__copyright'],
   domElementStyle: {
     'color': 'white;',
   },

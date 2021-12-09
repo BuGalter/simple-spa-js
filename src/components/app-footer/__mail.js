@@ -10,7 +10,7 @@
    * @type {DOM element}
    */
   domElementTag: 'span',
-  domElementClasses: ['main-content-footer__mail'],
+  domElementClasses: ['app-footer__mail'],
   domElementStyle: {
     'color': 'white;',
   },

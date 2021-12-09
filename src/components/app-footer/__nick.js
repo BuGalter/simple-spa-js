@@ -10,7 +10,7 @@
    * @type {DOM element}
    */
   domElementTag: 'span',
-  domElementClasses: ['main-content-footer__nick'],
+  domElementClasses: ['app-footer__nick'],
   domElementStyle: {
     'color': 'white;',
   },

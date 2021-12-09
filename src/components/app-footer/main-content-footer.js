@@ -1,4 +1,4 @@
-import { Creator } from "../../../utils/creator";
+import { Creator } from "../../utils/creator";
 import { copyrightElement } from "./__copyright";
 import { nickElement } from "./__nick";
 import { mailElement } from "./__mail";
@@ -9,13 +9,13 @@ import { mailElement } from "./__mail";
  * @see module: simple-spa-js/dom-element.
  */
 
-const mainContentFooterConteiner = {
+const appFooterConteiner = {
   /**
    * Description of the container that will contain footer app.
    * @type {DOM element}
    */
   domElementTag: 'div',
-  domElementClasses: ['main-content-footer', 'flex-block'],
+  domElementClasses: ['app-footer', 'flex-block'],
   domElementStyle: {
     'width': '100%;',
     'background-color': 'black;',
@@ -23,10 +23,10 @@ const mainContentFooterConteiner = {
   }
 };
 
-function makeMainContentFooter() {
+function makeAppFooter() {
   const footerElements = [copyrightElement, nickElement, mailElement];
-  const mainContentFooter = Creator.collectElementsToContainer(mainContentFooterConteiner, footerElements);
-  return mainContentFooter;
+  const appFooter = Creator.collectElementsToContainer(appFooterConteiner, footerElements);
+  return appFooter;
 };
 
-export { makeMainContentFooter };
+export { makeAppFooter };
