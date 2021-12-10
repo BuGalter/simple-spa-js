@@ -28,7 +28,34 @@ import { tableCellElement } from "./table-cell";
   }
 };
 
+async function getApiData(url, requestParams = {}) {
+  let response = await fetch(url, requestParams);
+  let data = await response.json();
+  return data;
+};
+
+function insertDataTable(data, conteiner) {
+  let len = data.length;
+  for (let i = 0; i < len; i += 1) {
+    let tableRowData = Creator.collectDomElement(tableRowElement);
+    for (let j = 0; j < 4; j += 1) { 
+      let tableCell = Creator.collectDomElement(tableCellElement);
+      tableCell.textContent = data[i].date;
+      tableRowData.append(tableCell);
+    };
+    conteiner.append(tableRowData);
+  };
+};
+
 function makeTableData() {
+  let url = 'http://127.0.0.1:7000/api';
+  let requestParams = {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'API-Key': 'secret'
+      }
+    };
   const tableData = Creator.collectDomElement(tableDataConteiner);
   const captionTable = Creator.collectDomElement(captionTableElement);
   const tableRow = Creator.collectDomElement(tableRowElement);
@@ -39,15 +66,11 @@ function makeTableData() {
     tableHeader.textContent = tableHeadersData[i];
     tableRow.append(tableHeader);
   };
-  for (let i = 0; i < 10; i += 1) {
-    let tableRowData = Creator.collectDomElement(tableRowElement);
-    for (let j = 0; j < 4; j += 1) { 
-      let tableCell = Creator.collectDomElement(tableCellElement);
-      tableCell.textContent = i;
-      tableRowData.append(tableCell);
-    };
-    tableData.append(tableRowData);
-  };
+
+  let data = getApiData(url, requestParams);
+  data.then(result => insertDataTable(result, tableData));
+  console.log(data);
+
   return tableData;
 };
 
