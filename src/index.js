@@ -17,6 +17,9 @@ const mainContent = makeMainContent();
 wrapper.append(mainContent);
 const footer = makeAppFooter();
 wrapper.append(footer);
-const table = document.querySelector('.table-data');
-getApiData(appConfig.url, appConfig.requestParams)
-  .then(result => insertDataTable(result, table));
+
+document.addEventListener('DOMContentLoaded', () => {
+  let table = document.querySelector('.table-data');
+  getApiData(appConfig.url, appConfig.requestParams)
+    .then(result => insertDataTable(result, table));
+});
