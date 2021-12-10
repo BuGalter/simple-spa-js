@@ -67,9 +67,7 @@ function makeTableData() {
     tableRow.append(tableHeader);
   };
 
-  let data = getApiData(url, requestParams);
-  data.then(result => insertDataTable(result, tableData));
-  console.log(data);
+  getApiData(url, requestParams).then(result => insertDataTable(result, tableData));
 
   return tableData;
 };
