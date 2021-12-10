@@ -3,7 +3,6 @@ import { captionTableElement } from "./__caption";
 import { tableRowElement } from "./table-row";
 import { tableHeadersElement } from "./table-headers";
 import { tableHeadersData } from "./table-headers-data";
-import { tableCellElement } from "./table-cell";
 
 /**
  * table-data module.
@@ -28,21 +27,6 @@ import { tableCellElement } from "./table-cell";
   }
 };
 
-function insertDataTable(data, conteiner) {
-  let len = data.length;
-  for (let i = 0; i < len; i += 1) {
-    let tableRowData = Creator.collectDomElement(tableRowElement);
-    for (let key in data[i]) { 
-      if (key !== 'id') {
-        let tableCell = Creator.collectDomElement(tableCellElement);
-        tableCell.textContent = data[i][key];
-        tableRowData.append(tableCell);
-      };
-    };
-    conteiner.append(tableRowData);
-  };
-};
-
 function makeTableData() {
   const tableData = Creator.collectDomElement(tableDataConteiner);
   const captionTable = Creator.collectDomElement(captionTableElement);
@@ -54,9 +38,6 @@ function makeTableData() {
     tableHeader.textContent = tableHeadersData[i];
     tableRow.append(tableHeader);
   };
-
-  getApiData(url, requestParams).then(result => insertDataTable(result, tableData));
-
   return tableData;
 };
 
