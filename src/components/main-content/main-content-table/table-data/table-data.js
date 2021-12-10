@@ -50,14 +50,6 @@ function insertDataTable(data, conteiner) {
 };
 
 function makeTableData() {
-  let url = 'http://127.0.0.1:7000/api';
-  let requestParams = {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'API-Key': 'secret'
-      }
-    };
   const tableData = Creator.collectDomElement(tableDataConteiner);
   const captionTable = Creator.collectDomElement(captionTableElement);
   const tableRow = Creator.collectDomElement(tableRowElement);
