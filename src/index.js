@@ -16,12 +16,10 @@ const footer = makeAppFooter();
 wrapper.append(footer);
 
 let url = 'http://127.0.0.1:7000/api';
-let response = await fetch(url, {
+let requestParams = {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json',
     'API-Key': 'secret'
-  }
-});
-let data = await response.json();
-console.log(data);
+    }
+  };
