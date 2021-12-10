@@ -28,12 +28,6 @@ import { tableCellElement } from "./table-cell";
   }
 };
 
-async function getApiData(url, requestParams = {}) {
-  let response = await fetch(url, requestParams);
-  let data = await response.json();
-  return data;
-};
-
 function insertDataTable(data, conteiner) {
   let len = data.length;
   for (let i = 0; i < len; i += 1) {
