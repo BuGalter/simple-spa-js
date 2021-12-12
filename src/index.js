@@ -17,9 +17,26 @@ const mainContent = makeMainContent();
 wrapper.append(mainContent);
 const footer = makeAppFooter();
 wrapper.append(footer);
+let table = document.querySelector('.table-data');
 
 document.addEventListener('DOMContentLoaded', () => {
-  let table = document.querySelector('.table-data');
   getApiData(appConfig.url, appConfig.requestParams)
-    .then(result => insertDataTable(result, table));
+    .then(result => insertDataTable(result, table))
+    .then(result => {
+        console.log(table);
+        console.log(table.rows);
+        console.log(table.rows.length);     
+        for (let i = 1; i <  table.rows.length; i += 1) {
+          console.log(table.rows[i]);
+        };
+      });
 });
+
+setTimeout(() => {
+  console.log(table);
+  console.log(table.rows);
+  console.log(table.rows.length);     
+  for (let i = 1; i <  table.rows.length; i += 1) {
+    console.log(table.rows[i]);
+  };
+}, 100);
