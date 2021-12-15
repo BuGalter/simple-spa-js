@@ -5,7 +5,7 @@ import { makeAppHeader } from './components/app-header/app-header';
 import { makeMainContent } from './components/main-content/main-content';
 import { makeAppFooter } from './components/app-footer/main-content-footer';
 import { getApiData } from './utils/get-data-api';
-import { insertDataTable } from './utils/work-data-table';
+import { insertDataTable, deleteBodyTable } from './utils/work-data-table';
 
 const body = document.body
 const appHeader = makeAppHeader();
@@ -21,6 +21,7 @@ let table = document.querySelector('.table-data');
 
 document.addEventListener('DOMContentLoaded', () => {
   getApiData(appConfig.url, appConfig.requestParams)
+    .then(data => deleteBodyTable(data, table))
     .then(data => insertDataTable(data))
     .then(tbody => table.append(tbody));
 });
