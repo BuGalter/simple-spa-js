@@ -25,7 +25,7 @@ function deleteBodyTable(data, table) {
       if (tbody.length === 0) {
         return data;
       };
-      tbody.remove();
+      tbody[0].remove();
       return data;
 };
 

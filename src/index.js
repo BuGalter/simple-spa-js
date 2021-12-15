@@ -7,6 +7,13 @@ import { makeAppFooter } from './components/app-footer/main-content-footer';
 import { getApiData } from './utils/get-data-api';
 import { insertDataTable, deleteBodyTable } from './utils/work-data-table';
 
+const addDataToTable = () => {
+  getApiData(appConfig.url, appConfig.requestParams)
+    .then(data => deleteBodyTable(data, table))
+    .then(data => insertDataTable(data))
+    .then(tbody => table.append(tbody));
+};
+
 const body = document.body
 const appHeader = makeAppHeader();
 body.prepend(appHeader);
@@ -19,14 +26,6 @@ const footer = makeAppFooter();
 wrapper.append(footer);
 let table = document.querySelector('.table-data');
 
-document.addEventListener('DOMContentLoaded', () => {
-  getApiData(appConfig.url, appConfig.requestParams)
-    .then(data => deleteBodyTable(data, table))
-    .then(data => insertDataTable(data))
-    .then(tbody => table.append(tbody));
-});
+document.addEventListener('DOMContentLoaded', addDataToTable());
 
-setTimeout(() => {
-  let tbody = table.tBodies[0];
-  tbody.remove();
-}, 10000);
+setTimeout(() => addDataToTable(), 10000);
