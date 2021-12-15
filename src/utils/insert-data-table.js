@@ -1,9 +1,11 @@
 import { Creator } from "./creator";
+import { tableTbodyElement } from "../components/main-content/main-content-table/table-data/table-tbody";
 import { tableRowElement } from "../components/main-content/main-content-table/table-data/table-row";
 import { tableCellElement } from "../components/main-content/main-content-table/table-data/table-cell";
 
-function insertDataTable(data, container) {
+function insertDataTable(data) {
   let len = data.length;
+  let tbody = Creator.collectDomElement(tableTbodyElement);
   for (let i = 0; i < len; i += 1) {
     let tableRowData = Creator.collectDomElement(tableRowElement);
     for (let key in data[i]) { 
@@ -13,8 +15,9 @@ function insertDataTable(data, container) {
         tableRowData.append(tableCell);
       };
     };
-    container.append(tableRowData);
+    tbody.append(tableRowData);
   };
+  return tbody;
 };
 
 export { insertDataTable };
