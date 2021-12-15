@@ -20,4 +20,13 @@ function insertDataTable(data) {
   return tbody;
 };
 
-export { insertDataTable };
+function deleteBodyTable(data, table) {
+  let tbody = table.tBodies;
+      if (tbody.length === 0) {
+        return data;
+      };
+      tbody.remove();
+      return data;
+};
+
+export { insertDataTable, deleteBodyTable };
