@@ -25,11 +25,20 @@ wrapper.append(mainContent);
 const footer = makeAppFooter();
 wrapper.append(footer);
 let table = document.querySelector('.table-data');
+let form = document.forms.sortForm;
+let sortBtn = form.sortBtn;
+console.log(sortBtn);
 
-document.addEventListener('DOMContentLoaded', () => {
-  //let form = document.querySelector('.main-content-sort-form');
-  let form = document.forms.sortForm;
-  console.log(form);
+sortBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+  console.log(form.sortParam.value);
+  form.sortParam.value = '';
+  let columns = document.getElementById('select-columns');
+  console.log(columns.value);
+  let condition = document.getElementById('select-condition');
+  console.log(condition.value);
 });
+
+//document.addEventListener('DOMContentLoaded', addDataToTable());
 
 //setTimeout(() => addDataToTable(), 10000);
