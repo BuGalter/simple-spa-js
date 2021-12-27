@@ -31,12 +31,16 @@ console.log(sortBtn);
 
 sortBtn.addEventListener('click', (event) => {
   event.preventDefault();
-  console.log(form.sortParam.value);
-  form.sortParam.value = '';
   let columns = document.getElementById('select-columns');
-  console.log(columns.value);
   let condition = document.getElementById('select-condition');
-  console.log(condition.value);
+  let sortParams = {
+    column: columns.value,
+    condition: condition.value,
+    sortParam: form.sortParam.value
+  };
+  appConfig.requestParams.body = JSON.stringify(sortParams);
+  console.log(appConfig.requestParams);
+  form.sortParam.value = '';
 });
 
 //document.addEventListener('DOMContentLoaded', addDataToTable());
