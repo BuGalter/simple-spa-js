@@ -13,6 +13,7 @@
   domElementClasses: ['sort-form__input-sort-parameter'],
   domElementAttributes: {
     type: 'text',
+    name: 'sort-param',
     placeholder: 'Введите параметр сортировки'
   },
   domElementStyle: {
