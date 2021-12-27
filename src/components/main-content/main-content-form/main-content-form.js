@@ -29,8 +29,8 @@ import { makeFormSelectCondition } from "./form-select-contition/form-select-con
 function makeMainContentForm() {
   const formElements = [inputElement, sortBtnElement];
   const sortForm = Creator.collectElementsToContainer(mainContentFormConteiner, formElements);
-  const selectContition = makeFormSelectCondition();
-  sortForm.prepend(selectContition);
+  const selectCondition = makeFormSelectCondition();
+  sortForm.prepend(selectCondition);
   const selectColumn = makeFormSelectColumn();
   sortForm.prepend(selectColumn)
   return sortForm;
