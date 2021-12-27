@@ -19,7 +19,7 @@ import { makeFormSelectCondition } from "./form-select-contition/form-select-con
   domElementTag: 'form',
   domElementClasses: ['main-content-sort-form', 'flex-block'],
   domElementAttributes: {
-    name: 'sort-form'
+    name: 'sortForm'
   },
   domElementStyle: {
     'justify-content': 'space-around;'

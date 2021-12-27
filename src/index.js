@@ -26,6 +26,10 @@ const footer = makeAppFooter();
 wrapper.append(footer);
 let table = document.querySelector('.table-data');
 
-document.addEventListener('DOMContentLoaded', addDataToTable());
+document.addEventListener('DOMContentLoaded', () => {
+  //let form = document.querySelector('.main-content-sort-form');
+  let form = document.forms.sortForm;
+  console.log(form);
+});
 
-setTimeout(() => addDataToTable(), 10000);
+//setTimeout(() => addDataToTable(), 10000);

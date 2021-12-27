@@ -12,7 +12,7 @@
   domElementTag: 'button',
   domElementClasses: ['sort-form__sort-btn'],
   domElementAttributes: {
-    name: 'sort-btn',
+    name: 'sortBtn',
   },
   domElementStyle: {
     'border-radius': '5px;',
