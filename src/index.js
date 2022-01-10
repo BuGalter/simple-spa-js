@@ -11,7 +11,10 @@ const addDataToTable = () => {
   getApiData(appConfig.url, appConfig.requestParams)
     .then(data => deleteBodyTable(data, table))
     .then(data => insertDataTable(data))
-    .then(tbody => table.append(tbody));
+    .then(tbody => table.append(tbody))
+    .catch(err => {
+      console.log(err);
+    });
 };
 
 const body = document.body
@@ -27,7 +30,6 @@ wrapper.append(footer);
 let table = document.querySelector('.table-data');
 let form = document.forms.sortForm;
 let sortBtn = form.sortBtn;
-console.log(sortBtn);
 
 sortBtn.addEventListener('click', (event) => {
   event.preventDefault();
@@ -43,6 +45,6 @@ sortBtn.addEventListener('click', (event) => {
   form.sortParam.value = '';
 });
 
-//document.addEventListener('DOMContentLoaded', addDataToTable());
+document.addEventListener('DOMContentLoaded', addDataToTable());
 
 //setTimeout(() => addDataToTable(), 10000);
