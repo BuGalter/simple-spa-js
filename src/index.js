@@ -13,7 +13,7 @@ const addDataToTable = () => {
     .then(data => insertDataTable(data))
     .then(tbody => table.append(tbody))
     .catch(err => {
-      console.log(err);
+      console.log(err.message);
     });
 };
 
